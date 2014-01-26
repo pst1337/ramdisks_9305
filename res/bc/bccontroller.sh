@@ -46,7 +46,7 @@ if [ "lov_gpu_freq" == "$1" ]; then
 fi
 
 if [ "lov_eq_gain_profiles" == "$1" ]; then
-	echo "Archis audiophile;Baseland;Bass extreme;Bass treble;Classic;Dance;Eargasm;HboHD;Metal/Rock;Pleasant;PST;Treble"
+	echo "Archis audiophile;Baseland;Bass extreme;Bass treble;Classic;Dance;Eargasm;Hbohd;Metal/Rock;Pleasant;PST;Treble"
 	exit 0
 fi
 
@@ -93,14 +93,14 @@ if [ "lov_presets" == "$1" ]; then
 	echo "^GPU: 160/266 / light uv;"
 
 	echo "Hbohd preset~"
-	echo "Gov: zzmoove / zzmoove-yank extreme battery"
+	echo "Gov: zzmoove / zzmoove-extreme battery yank"
 	echo "^Sched: zen / zen"
 	echo "^CPU: 1200 / medium uv"
-	echo "^GPU: 266/350 / light uv;"
+	echo "^GPU: 266/350 / medium uv;"
 	
 	echo "Pst preset~"
 	echo "Gov: zzmoove / zzmoove-optimal"
-	echo "^Sched: zen / zen"
+	echo "^Sched: row / row"
 	echo "^CPU: 1400 / light uv"
 	echo "^GPU: 160-533 / light uv;"
 	
@@ -148,19 +148,19 @@ if [ "conf_presets" == "$1" ]; then
 		echo "1000000;undervolt light;"
 		echo "160/266;undervolt light"
 	fi
-	if [ "Hbohd preset" ==  "$2" ]; then
+	if [ "Hbohd" ==  "$2" ]; then
 		# gov, gov prof, sched int, sched ext, cpu max, cpu uv, gpu freq, gpu uv
 		echo "zzmoove;zzmoove - battery extreme yank;"
 		echo "zen;zen;"
 		echo "1200000;undervolt medium;"
-		echo "266/350;undervolt light"
+		echo "266/350;undervolt medium"
 	fi
 	if [ "Pst preset" ==  "$2" ]; then
 		# gov, gov prof, sched int, sched ext, cpu max, cpu uv, gpu freq, gpu uv
 		echo "zzmoove;zzmoove - optimal;"
 		echo "row;row;"
-		echo "1400000;undervolt medium;"
-		echo "160/266/350/440/533;undervolt light"
+		echo "1400000;undervolt light;"
+		echo "None;undervolt light"
 	fi
 	exit 0
 fi
@@ -267,11 +267,11 @@ if [ "conf_eq_gains" == "$1" ]; then
 	if [ "Archis audiophile" ==  "$2" ]; then
 		echo "8;4;4;2;6"
 	fi
+	if [ "Hbohd" ==  "$2" ]; then
+		echo "9;7;4;4;5"
+	fi
 	if [ "Eargasm" ==  "$2" ]; then
 		echo "12;8;4;2;3"
-	fi
-	if [ "HboHD" ==  "$2" ]; then
-		echo "9;7;4;4;5"
 	fi
 	if [ "Pleasant" ==  "$2" ]; then
 		echo "4;3;2;2;3"
@@ -1046,19 +1046,18 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "95" >/sys/devices/system/cpu/cpufreq/ondemand/up_threshold
 	fi
 	
-	 if [ "smartassV2 - standard" == "$2" ]; then
-
-	  echo "800000" > /sys/devices/system/cpu/cpufreq/smartassV2/awake_ideal_freq
-	  echo "0" > /sys/devices/system/cpu/cpufreq/smartassV2/debug_mask
-	  echo "99000" > /sys/devices/system/cpu/cpufreq/smartassV2/down_rate_us
-	  echo "55" > /sys/devices/system/cpu/cpufreq/smartassV2/max_cpu_load
-	  echo "25" > /sys/devices/system/cpu/cpufreq/smartassV2/min_cpu_load
-	  echo "300000" > /sys/devices/system/cpu/cpufreq/smartassV2/ramp_down_step
-	  echo "200000" > /sys/devices/system/cpu/cpufreq/smartassV2/ramp_up_step
-	  echo "2" > /sys/devices/system/cpu/cpufreq/smartassV2/sample_rate_jiffies
-	  echo "200000" > /sys/devices/system/cpu/cpufreq/smartassV2/sleep_ideal_freq
-	  echo "99999999" > /sys/devices/system/cpu/cpufreq/smartassV2/sleep_wakeup_freq
-	  echo "48000" > /sys/devices/system/cpu/cpufreq/smartassV2/up_rate_us
+	if [ "smartassV2 - standard" == "$2" ]; then
+	      echo "800000" > /sys/devices/system/cpu/cpufreq/smartassV2/awake_ideal_freq
+	      echo "0" > /sys/devices/system/cpu/cpufreq/smartassV2/debug_mask
+	      echo "99000" > /sys/devices/system/cpu/cpufreq/smartassV2/down_rate_us
+	      echo "55" > /sys/devices/system/cpu/cpufreq/smartassV2/max_cpu_load
+	      echo "25" > /sys/devices/system/cpu/cpufreq/smartassV2/min_cpu_load
+	      echo "300000" > /sys/devices/system/cpu/cpufreq/smartassV2/ramp_down_step
+	      echo "200000" > /sys/devices/system/cpu/cpufreq/smartassV2/ramp_up_step
+	      echo "2" > /sys/devices/system/cpu/cpufreq/smartassV2/sample_rate_jiffies
+	      echo "200000" > /sys/devices/system/cpu/cpufreq/smartassV2/sleep_ideal_freq
+	      echo "99999999" > /sys/devices/system/cpu/cpufreq/smartassV2/sleep_wakeup_freq
+	      echo "48000" > /sys/devices/system/cpu/cpufreq/smartassV2/up_rate_us
 
 	 fi
 	
@@ -1066,14 +1065,15 @@ if [ "apply_governor_profile" == "$1" ]; then
 fi
 
 if [ "apply_system_tweaks" == "$1" ]; then
-<<<<<<< HEAD
-      if [ "Frandom tweaks" == "$2" ]; then
+
+	  if [ "Frandom tweaks" == "$2" ]; then
 	      insmod $LIBPATH/frandom.ko ;
 	      busybox ln -f /dev/frandom /dev/random ; 
 	      busybox ln -f /dev/frandom /dev/erandom ;
 	      busybox ln -f /dev/frandom /dev/urandom ;
 	      busybox chmod 666 /dev/*random
-=======
+	  fi
+
 	if [ "Off" == "$2" ]; then
 		echo "16384" > /proc/sys/fs/inotify/max_queued_events
 		echo "77749" > /proc/sys/fs/file-max
@@ -1170,7 +1170,6 @@ if [ "apply_system_tweaks" == "$1" ]; then
 			busybox ln /dev/erandom /dev/urandom
 			busybox chmod 644 /dev/urandom
 		fi
->>>>>>> 05f8869... Boeffla ramfs: Improve frandom handling + remove restart dependency with system tweaks
 	fi
 
 	if [ "Boeffla tweaks" == "$2" ]; then
