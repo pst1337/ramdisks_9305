@@ -1065,7 +1065,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 fi
 
 if [ "apply_system_tweaks" == "$1" ]; then
-<<<<<<< HEAD
+
 	  if [ "Frandom tweaks" == "$2" ]; then
 	      insmod $LIBPATH/frandom.ko ;
 	      busybox ln -f /dev/frandom /dev/random ; 
@@ -1073,7 +1073,7 @@ if [ "apply_system_tweaks" == "$1" ]; then
 	      busybox ln -f /dev/frandom /dev/urandom ;
 	      busybox chmod 666 /dev/*random
 	  fi
-=======
+
 	if [ "Off" == "$2" ]; then
 		echo "16384" > /proc/sys/fs/inotify/max_queued_events
 		echo "77749" > /proc/sys/fs/file-max
@@ -1171,7 +1171,6 @@ if [ "apply_system_tweaks" == "$1" ]; then
 			busybox chmod 644 /dev/urandom
 		fi
 	fi
->>>>>>> 3956a52... Boeffla ramfs: Improve frandom handling + remove restart dependency with system tweaks
 
 	if [ "Boeffla tweaks" == "$2" ]; then
 		echo "32000" > /proc/sys/fs/inotify/max_queued_events
