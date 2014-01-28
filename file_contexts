@@ -247,6 +247,7 @@
 /dev/usb/tty.*	u:object_r:usb_device:s0
 /dev/usb_mtp_gadget.*	u:object_r:mtp_device:s0
 /dev/vfsspi	u:object_r:vfsspi_device:s0
+/dev/com.koushikdutta.superuser(/.*)?	u:object_r:koushikdutta_device:s0 
 
 ####################################
 # sysfs files
@@ -325,6 +326,7 @@
 /hidden(/.*)?	u:object_r:hidden_file:s0
 /persdata(/.*)?	u:object_r:persdata_data_file:s0
 /persist(/.*)?   u:object_r:persist_data_file:s0
+/preload(/.*)? u:object_r:hidden_file:s0
 /tombstone(/.*)?   u:object_r:tombstone_data_file:s0
 /tombstones(/.*)?   u:object_r:tombstones_data_file:s0
 
@@ -344,6 +346,7 @@
 /system/bin/mcDriverDaemon	u:object_r:mobicoredaemon_exec:s0
 /system/bin/mlexe    u:object_r:mlexe_exec:s0 
 /system/bin/smdexe      u:object_r:smdexe_exec:s0 
+/system/bin/ss_conn_daemon	u:object_r:ss_conn_daemon_exec:s0
 /system/etc/security/.drm	u:object_r:drm_security_system_file:s0
 /system/etc/ymc/setup	u:object_r:setup_ymc_etc_system_file:s0
 /system/lib/drm			u:object_r:drm_lib_system_file:s0
