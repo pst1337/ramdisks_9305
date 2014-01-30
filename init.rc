@@ -557,4 +557,4 @@ service boeffla-init /sbin/boeffla-init.sh
     class main
     user root
     group root
-    oneshot    
+    oneshot
