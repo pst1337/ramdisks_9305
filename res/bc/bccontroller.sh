@@ -1,4 +1,4 @@
-# Boeffla-Config controller interface
+ # Boeffla-Config controller interface
 #
 # Version: GPU 5 frequencies
 #
@@ -148,7 +148,7 @@ if [ "conf_presets" == "$1" ]; then
 		echo "1000000;undervolt light;"
 		echo "160/266;undervolt light"
 	fi
-	if [ "Hbohd" ==  "$2" ]; then
+	if [ "Hbohd preset" ==  "$2" ]; then
 		# gov, gov prof, sched int, sched ext, cpu max, cpu uv, gpu freq, gpu uv
 		echo "zzmoove;zzmoove - battery extreme yank;"
 		echo "zen;zen;"
