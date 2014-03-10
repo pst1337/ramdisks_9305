@@ -1,4 +1,4 @@
- # Boeffla-Config controller interface
+# Boeffla-Config controller interface
 #
 # Version: GPU 5 frequencies
 #
