@@ -566,7 +566,7 @@ service mtpd /system/bin/mtpd
 service keystore /system/bin/keystore /data/misc/keystore
     class main
     user keystore
-    group keystore drmrpc
+    group keystore drmrpc system
 
 service dumpstate /system/bin/dumpstate -s
     class main
@@ -585,11 +585,11 @@ service mdnsd /system/bin/mdnsd
     socket mdnsd stream 0660 mdnsr inet
     disabled
     oneshot
-    
+
 # Call Boeffla-Kernel init script
 service boeffla-init /sbin/boeffla-init.sh
     class main
     user root
     group root
     oneshot
-
+    
