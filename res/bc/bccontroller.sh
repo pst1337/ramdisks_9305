@@ -831,7 +831,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_delay
 		echo "40" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_threshold
 		echo "4" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_sleep_multiplier
-		echo "200" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
+		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
@@ -888,7 +888,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_delay
 		echo "40" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_threshold
 		echo "4" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_sleep_multiplier
-		echo "200" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
+		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
@@ -945,7 +945,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_delay
 		echo "40" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_threshold
 		echo "4" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_sleep_multiplier
-		echo "200" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
+		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
 		echo "70" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
@@ -1002,7 +1002,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_delay
 		echo "40" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_threshold
 		echo "4" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_sleep_multiplier
-		echo "200" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
+		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
@@ -1059,7 +1059,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_delay
 		echo "40" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_idle_threshold
 		echo "4" > /sys/devices/system/cpu/cpufreq/zzmoove/sampling_rate_sleep_multiplier
-		echo "200" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
+		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
 		echo "65" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
