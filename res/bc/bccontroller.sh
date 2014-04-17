@@ -757,7 +757,9 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "25" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
 		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
-		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles
+		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/ignore_nice_load
@@ -815,7 +817,9 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "50" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
 		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
-		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles
+		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/ignore_nice_load
@@ -873,7 +877,9 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
 		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
-		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles
+		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/ignore_nice_load
@@ -931,7 +937,9 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "25" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
 		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
-		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles
+		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/ignore_nice_load
@@ -989,7 +997,9 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "50" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
 		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
-		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles
+		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/ignore_nice_load
@@ -1047,7 +1057,9 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "50" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
 		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
-		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles
+		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles
+		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/ignore_nice_load
@@ -1722,7 +1734,9 @@ if [ "action_debug_info_file" == "$1" ]; then
 	cat /sys/devices/system/cpu/cpufreq/zzmoove/down_threshold_hotplug_freq1 >> $2
 	cat /sys/devices/system/cpu/cpufreq/zzmoove/down_threshold_hotplug_freq2 >> $2
 	cat /sys/devices/system/cpu/cpufreq/zzmoove/down_threshold_hotplug_freq3 >> $2
-	cat /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles >> $2
+	cat /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_up_cycles >> $2
+	cat /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_down_cycles >> $2
+	cat /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_freq >> $2
 	cat /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold >> $2
 	cat /sys/devices/system/cpu/cpufreq/zzmoove/disable_hotplug_sleep >> $2
 	cat /sys/devices/system/cpu/cpufreq/zzmoove/disable_hotplug >> $2
