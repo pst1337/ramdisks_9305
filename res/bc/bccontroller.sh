@@ -20,12 +20,12 @@ KERNEL_FEATURES="-1-2-3-"
 LIBPATH="/system/lib/modules"		# Cyanogenmod+Omni
 
 # block devices
-SYSTEM_DEVICE="/dev/block/mmcblk0p9"
-CACHE_DEVICE="/dev/block/mmcblk0p8"
-DATA_DEVICE="/dev/block/mmcblk0p12"
-BOOT_DEVICE="/dev/block/mmcblk0p5"
-RADIO_DEVICE="/dev/block/mmcblk0p7"
-RECOVERY_DEVICE="/dev/block/mmcblk0p6"
+SYSTEM_DEVICE="/dev/block/mmcblk0p13"
+CACHE_DEVICE="/dev/block/mmcblk0p12"
+DATA_DEVICE="/dev/block/mmcblk0p16"
+BOOT_DEVICE="/dev/block/mmcblk0p8"
+RADIO_DEVICE="/dev/block/mmcblk0p10"
+RECOVERY_DEVICE="/dev/block/mmcblk0p9"
 
 # *******************
 # List of values
