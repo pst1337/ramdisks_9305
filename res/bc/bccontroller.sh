@@ -12,8 +12,8 @@
 KERNEL_SPECS="i9300;cm;omni11;http://boeffla.df-kunde.de/sgs3/boeffla-kernel-omni/"
 
 # kernel features 
-# (1=enable-busybox)
-KERNEL_FEATURES="-1-"
+# (1=enable-busybox,2=enable-frandom)
+KERNEL_FEATURES="-1-2-"
 
 # path to kernel libraries
 #LIBPATH="/lib/modules"				# Samsung
@@ -62,7 +62,7 @@ if [ "lov_eq_gain_profiles" == "$1" ]; then
 fi
 
 if [ "lov_system_tweaks" == "$1" ]; then
-	echo "Off;Frandom tweaks;Boeffla tweaks;Speedmod tweaks;Mattiadj tweaks"
+	echo "Off;Boeffla tweaks;Speedmod tweaks;Mattiadj tweaks"
 	exit 0
 fi
 
@@ -1155,15 +1155,6 @@ if [ "apply_system_tweaks" == "$1" ]; then
 		busybox sync
 	fi
 
-	if [ "Frandom tweaks" == "$2" ]; then
-		insmod $LIBPATH/frandom.ko
-		busybox ln -f /dev/erandom /dev/random
-		busybox chmod 644 /dev/random
-		busybox ln -f /dev/erandom /dev/urandom
-		busybox chmod 644 /dev/urandom
-		busybox sleep 0.5s
-		busybox sync
-	fi
 
 	if [ "Boeffla tweaks" == "$2" ]; then
 		echo "70" > /proc/sys/vm/dirty_background_ratio
