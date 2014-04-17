@@ -756,7 +756,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "25" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
-		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
+		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
@@ -777,6 +777,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "200" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
+		echo "2" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_force_down
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up_sleep
 		echo "70" > /sys/devices/system/cpu/cpufreq/zzmoove/up_threshold
@@ -813,7 +814,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "50" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
-		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
+		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
@@ -834,6 +835,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
+		echo "2" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_force_down
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up_sleep
 		echo "95" > /sys/devices/system/cpu/cpufreq/zzmoove/up_threshold
@@ -870,7 +872,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
-		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
+		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
@@ -891,6 +893,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
+		echo "2" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_force_down
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up_sleep
 		echo "67" > /sys/devices/system/cpu/cpufreq/zzmoove/up_threshold
@@ -927,7 +930,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "25" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "25" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
-		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
+		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
@@ -948,6 +951,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
+		echo "2" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_force_down
 		echo "70" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up_sleep
 		echo "60" > /sys/devices/system/cpu/cpufreq/zzmoove/up_threshold
@@ -984,7 +988,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "50" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
-		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
+		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
@@ -1005,6 +1009,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
+		echo "2" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_force_down
 		echo "75" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
 		echo "90" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up_sleep
 		echo "70" > /sys/devices/system/cpu/cpufreq/zzmoove/up_threshold
@@ -1041,7 +1046,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/freq_step_sleep
 		echo "50" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold
-		echo "35" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
+		echo "30" > /sys/devices/system/cpu/cpufreq/zzmoove/grad_up_threshold_sleep
 		echo "5" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_block_cycles
 		echo "0" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_idle_threshold
 		echo "1" > /sys/devices/system/cpu/cpufreq/zzmoove/hotplug_sleep
@@ -1062,6 +1067,7 @@ if [ "apply_governor_profile" == "$1" ]; then
 		echo "100" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_cycles
 		echo "1200000" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_freq
 		echo "10" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_threshold
+		echo "2" > /sys/devices/system/cpu/cpufreq/zzmoove/scaling_block_force_down
 		echo "65" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up
 		echo "90" > /sys/devices/system/cpu/cpufreq/zzmoove/smooth_up_sleep
 		echo "60" > /sys/devices/system/cpu/cpufreq/zzmoove/up_threshold
