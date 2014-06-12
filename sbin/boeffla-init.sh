@@ -4,9 +4,11 @@
 # *********************************************************
 
 # Kernel type
-	# KERNEL="SAM1"		# Samsung old bootanimation / zram concept
-	KERNEL="SAM2"		# Samsung new bootanimation / zram concept
-	# KERNEL="CM"		# Cyanogenmod+Omni
+		# KERNEL="SAM1" # Samsung old bootanimation concept
+		  KERNEL="SAM2"	# Samsung new bootanimation concept
+		# KERNEL="CM"   # Cyanogenmod+Omni
+
+
 
 # path to internal sd memory
 	# SD_PATH="/data/media"		# JB 4.1
