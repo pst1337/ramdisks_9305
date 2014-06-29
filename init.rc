@@ -153,8 +153,8 @@ loglevel 3
     chmod 0644 /dev/xt_qtaguid
     
 # ko files for exfat -> AP: modules instead compiled into kernel
-    insmod /lib/modules/exfat_core.ko
-    insmod /lib/modules/exfat_fs.ko
+insmod /lib/modules/exfat_core.ko
+insmod /lib/modules/exfat_fs.ko
 
 on fs
 # mount mtd partitions
@@ -851,12 +851,12 @@ service powersnd /system/bin/samsungpowersoundplay
     disabled
     oneshot
 
-# service bootanim /system/bin/bootanimation
-#    class main
-#    user graphics
-#    group graphics system
-#    disabled
-#    oneshot
+#service bootanim /system/bin/bootanimation -> AP removed to allow custom boot animation
+#   class main
+#   user graphics
+#   group graphics system
+#   disabled
+#   oneshot
 
 service installd /system/bin/installd
     class main
@@ -974,9 +974,11 @@ on property:persist.sys.drs.enforce=1
 on property:persist.sys.drs.enforce=0
 	start auditd
 	
+	
 # Call Boeffla-Kernel init script
 service boeffla-init /sbin/boeffla-init.sh
     class main
     user root
     group root
-    oneshot
+    oneshot 
+	
