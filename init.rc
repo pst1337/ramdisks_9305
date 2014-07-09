@@ -8,8 +8,7 @@ import /init.environ.rc
 import /init.usb.rc
 import /init.${ro.hardware}.rc
 import /init.trace.rc
-# Include superuser daemon support (for SlimKat)
-import /init.superuser.rc
+import /init.carrier.rc
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -284,6 +283,9 @@ on post-fs-data
 
     # Include extra init file with omni extras
     import /init.omni.rc
+    
+    # Include superuser daemon support (for SlimKat)
+    import /init.superuser.rc
 
 on boot
 # basic network init
@@ -430,12 +432,6 @@ service healthd-charger /sbin/healthd -n
     critical
     seclabel u:r:healthd:s0
 
-on property:selinux.reload_policy=1
-    restart ueventd
-    restart installd
-    chown -R system system /selinux/booleans
-    chown -R system system /sys/fs/selinux/booleans
-
 service console /system/bin/sh
     class core
     console
@@ -574,4 +570,3 @@ service boeffla-init /sbin/boeffla-init.sh
     user root
     group root
     oneshot
-    
